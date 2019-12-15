@@ -10,7 +10,7 @@ W tej edycji zajęcia odbędą się:
   - 26 stycznia 2020 (3h)
 
 ### Syllabus:
-  1. Podstawy języka:
+  1. Podstawy języka Python:
      - wyświetlanie i wczytywanie danych
      - zmienne i typy podstawowe: `int`, `float`, `str`
      - operacje arytmetyczne
@@ -34,8 +34,8 @@ W tej edycji zajęcia odbędą się:
      - sety
   3. Analiza danych w Pythonie
      - pandas: manipulowanie szeregami i ramkami danych
-  4. Pomysły:
-     - dobre nawyki i pythonizmy: doc-stringi, lintery
+  4. Pomysły (wybrane tematy z poniższej listy):
+     - dobre nawyki i pythonizmy: doc-stringi, lintery, typing
      - logowanie
      - serializowanie
      - łączenie się z bazą danych (np. noSQL)
@@ -45,9 +45,9 @@ W tej edycji zajęcia odbędą się:
      - DeepLearning w Pythonie (pytorch) i Colab
      - jupyter notebook i jupyter lab
      - multiprocessing w pythonie
-     - debugging w PyCharmie
-     - virtual env
-
+     - debugging w PyCharmie.
+     - virtual environments (venv)
+     - Programowanie asynchroniczne.
 
 ### Zaliczenie
 

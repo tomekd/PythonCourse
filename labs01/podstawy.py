@@ -41,7 +41,7 @@ print(None)
 
 # ## Zmienne
 #  * case sensitive,
-#  * brak deklaracji typu,
+#  * brak konieczności deklaracji typu,
 #  * do zmiennej można przypisać wszystko.
 
 # In[2]:
@@ -81,9 +81,9 @@ print('Cześć', imie, '!')
 # In[24]:
 
 
-print(int("100") * 2)
-print(str(100) * 2)
-print(float(100) * 2)
+print(int("100"))
+print(str(100))
+print(float(100))
 print(bool("Fałsz"))
 
 
@@ -104,16 +104,6 @@ linijkowy
 """
 # print("Nie chcę być wydrukowanym")
 print("A teraz chcę")
-
-
-# Operacje na napisach:
-#  * konkatenacja `+`, np. `"Tarnowo " + "Podgórne"`
-#  * wielokrotność: `*`, np. `"O" * 6` ("OOOOOO")
-
-# In[16]:
-
-
-print("N" + "o" * 10 + '!')
 
 
 # ## Listy
@@ -309,6 +299,10 @@ else:
 napis = "Wiadomość"
 print(napis)
 
+
+# Operacje na napisach:
+#  * konkatenacja `+`, np. `"Tarnowo " + "Podgórne"`
+#  * wielokrotność: `*`, np. `"O" * 6` ("OOOOOO")
 
 # In[ ]:
 
