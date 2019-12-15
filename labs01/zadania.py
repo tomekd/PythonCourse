@@ -35,34 +35,34 @@ wynik zapisz do zmiennej suma. Wyświetl zawartość tej funkcji na ekran.
 """
 
 """
-zad. 1
+zad. 6
 Stwórz 3 elementową listę, która zawiera nazwy 3 Twoich ulubionych owoców.
 Wynik przypisz do zmiennej `owoce`.
 """
 
 """
-zad. 2
+zad. 7
 Dodaj do powyższej listy jako nowy element "pomidor".
 """
 
 """
-zad. 3
+zad. 8
 Usuń z powyższej listy drugi element.
 """
 
 
 """
-zad. 4
+zad. 9
 Rozszerz listę o tablice ['Jabłko', "Gruszka"].
 """
 
 """
-zad. 5
+zad. 10
 Wyświetl listę owoce, ale bez pierwszego i ostatniego elementu.
 """
 
 """
-zad. 6
+zad. 11
 Wyświetl co trzeci element z listy owoce.
 """
 
@@ -133,3 +133,83 @@ occasionals = {'April': 32058, 'May': 147898, 'June': 171494, 'July': 194316, 'A
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
           'August', 'September', 'October', 'November', 'December']
 
+"""
+zad. 15
+ * Stwórz listę składającą się z dowolnych 100 elementów, np. może być
+ to listę kwadratów liczb.
+ * Sprawdź za pomocą funkcji len liczbę elementów tej listy.
+ * Usuń trzeci, element.
+ * Usuń przedostatni element.
+ * Wyświetl pierwsze 10 elementów.
+"""
+
+"""
+zad. 16
+Znajdz najmniejsz element w poniższej liście.
+"""
+numbers = [0, 6, 9, -10, -5, 9, 8, -6]
+
+"""
+zad. 17
+Wyświetl poniższy słownik, tak, aby każda para "klucz: wartość"
+była w osobnej linii.
+"""
+s = {'Tomasz': [3, 4, 5, 4], 'Agata': [5, 5, 5, 4]}
+
+
+"""
+zad. 18
+Poniżej jest podana lista liczby. Stwórz słownik <counter>, którego kluczami
+będą wartości występujące w liście <liczby>, a wartościami ile dany element
+wystąpił w liście <liczby>.
+"""
+liczby = [3, 4, 3, 3, 4, 7, 9]
+
+"""
+zad. 19
+Poniższy słownik oceny dwóch osób. Stwórz nowy słownik z takimi samymi kluczami,
+ale wartościami tego słownika będą średnie oceń.
+"""
+s = {'Tomasz': [3, 4, 5, 4], 'Agata': [5, 5, 5, 4]}
+
+
+"""
+zad. 20
+Dla podanego poniże słownika S, stwórz nowy słownik, którego kluczami będą
+wartości słownika S, a wartościami: odpowiadające im klucze z S.
+"""
+s = {'Klucz1': 'Wartosc1', 'Klucz2': 'Wartosc2', 'Klucz3': 'Wartosc3'}
+
+"""
+zad. 21
+Napisz kod, który wypisze na ekran elementy, które występnują w obu poniżej
+podanych funkcjach.
+"""
+l1 = [99, 8, 7, 55]
+l2 = [55, 111, 11, 99, 8]
+
+"""
+zad. 22
+Napisz kod, który znajdzie najdroższy produkt  w poniższym słowniku.
+"""
+zakupy = {'telefon': 1000, 'ładowarka': 35, 'chleb': 4.30, 'kawa': 55, 'gramofon': 240}
+
+"""
+zad. 23
+Stwórz listę składającą się z wartości słownika zakupy.
+"""
+zakupy = {'telefon': 1000, 'ładowarka': 35, 'chleb': 4.30, 'kawa': 55, 'gramofon': 240}
+
+"""
+zad. 24
+Wyświetl na ekranie poniższy wzór:
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * *
+* * *
+* *
+*
+"""

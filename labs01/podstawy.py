@@ -5,21 +5,7 @@
 # 
 # &nbsp;
 # 
-# ##  26 stycznia 2019
-
-# In[ ]:
-
-contractions_expansions = {"don't": "do not"}
-sentence = "I'd guess that it's Frank Sinatra."
-sentence = sentence.replace(' \'', '\'')
-sentence = sentence.replace(' n\'t', 'n\'t')
-words = sentence.split()
-for i in range(len(words)):
-    for contraction, expansion in contractions_expansions.items():
-        if contraction == words[i]:
-            words[i] = expansion
-sentence = ' '.join(words)
-
+# ##  15 grudnia 2019
 
 # In[ ]:
 
@@ -35,29 +21,36 @@ print('Python')
 print('Hello', 'Python', '!')
 
 
-# Typy proste:
-#  * liczby całkowite: `int`, np. `3`, `1000`, `-100`, `0`
-#  * liczby rzeczywiste: `float`: `3.14`, `5.0`, `-0.001`
-#  * napisy: `str`: `"Python"`, `"Rock'n'Roll"`, `'zalicznie z przedmiotu'`
-#  * logiczne `bool`, `True`, `False`
+# Typy podstawowe:
+#  * liczby całkowite (`int`): `3`, `1000`, `-100`, `0`
+#  * liczby rzeczywiste (`float`): `3.14`, `5.0`, `-0.001`
+#  * napisy: (`str`): `"Python"`, `"Rock'n'Roll"`, `'zalicznie z przedmiotu'`
+#  * logiczne (`bool`): `True`, `False`
 #  * None: `None`
 
-# In[6]:
+# In[1]:
 
 
 print(10)
 print(1000.0)
-print (100, 100.0, "Sto")
-print("Zaokrąglenie PI:", 3.141519)
+print (100, 100.0, 'Sto')
+print('Zaokrąglenie PI:', 3.141519)
+print(True, False)
+print(None)
 
 
-# In[4]:
+# ## Zmienne
+#  * case sensitive,
+#  * brak deklaracji typu,
+#  * do zmiennej można przypisać wszystko.
+
+# In[2]:
 
 
-print(type(100))
-print(type(20.5))
-print(type("okno"))
-print(type(None))
+user = "t.dwojak"
+domain = "amu.edu.pl"
+email = user + "@" + domain
+print("email:", email)
 
 
 # Operacje arytmetyczne na liczbach:
@@ -76,14 +69,11 @@ print("2 ** 10", "=", 2 ** 10)
 print(1 + 2 - 3 + (4 * 5) / 6 ** 2)
 
 
-# Operacje na napisach:
-#  * konkatenacja `+`, np. `"Tarnowo " + "Podgórne"`
-#  * wielokrotność: `*`, np. `"O" * 6` ("OOOOOO")
-
-# In[16]:
+# In[4]:
 
 
-print("N" + "o" * 10 + '!')
+imie = input('Przedstaw się')
+print('Cześć', imie, '!')
 
 
 # Konwersja typów:
@@ -95,20 +85,6 @@ print(int("100") * 2)
 print(str(100) * 2)
 print(float(100) * 2)
 print(bool("Fałsz"))
-
-
-# ## Zmienne
-#  * case sensitive,
-#  * brak deklaracji typu,
-#  * do zmiennej można przypisać wszystko.
-
-# In[2]:
-
-
-user = "t.dwojak"
-domain = "amu.edu.pl"
-email = user + "@" + domain
-print("email:", email)
 
 
 # ## Komentarze
@@ -130,7 +106,15 @@ linijkowy
 print("A teraz chcę")
 
 
-# # Podstawy cz. 2
+# Operacje na napisach:
+#  * konkatenacja `+`, np. `"Tarnowo " + "Podgórne"`
+#  * wielokrotność: `*`, np. `"O" * 6` ("OOOOOO")
+
+# In[16]:
+
+
+print("N" + "o" * 10 + '!')
+
 
 # ## Listy
 #  * W Pythonie nie ma tablic, są listy;
@@ -304,6 +288,7 @@ else:
 # 
 #  * Porównanie za pomocą `==`
 #  * znak różności: `!=`
+#  * większe, mniejsze: `>`, `>=`, `<`, `<=`
 #  * Sprawdzenie, czy coś jest w liście: `item in l`
 #  * Do łączenia warunków służą słowa klucznowe `and` i `or`
 
@@ -363,24 +348,97 @@ print(text)
 print(text.strip(' '))
 
 
-# # Pytania?
-
 # ## Funkcje
 
+# ```python
+# def nazwa_funkcji(arg_1, arg_2, arg_3):
+#     instrukcja 1
+#     instrukcja 2
+#     return jakaś wartość
+# ```
+
+# In[5]:
+
+
+def max2(a, b):
+    if a >= b:
+        return a
+    return b
+print(max2(56, 512))
+
+
 # In[ ]:
 
 
-def is_greater_than_5(x):
-    if x > 5:
-        return True
-    else:
-        return False
+def srednia(lista):
+    s = 0
+    for item in lista:
+        s += item
+    return s / len(lista) 
 
+print(srednia([7,8,9]))
+
+
+# In[6]:
+
+
+def count(lista, item):
+    l = 0
+    for i in lista:
+        if i == item:
+            l += 1
+    return l
+
+
+# In[9]:
+
+
+count([5,5,5,4], 5)
+count(lista=[5,5,5,4], item=5)
+count(item=5, lista=[5,5,5,4])
+
+
+# ## Korzystanie z bibliotek
+
+# In[11]:
+
+
+import os
+print(os.name)
+
+from os import getenv
+print('Nazwa uzytkownika: {}'.format(getenv("USERNAME")))
+
+
+# In[12]:
+
+
+from collections import *
+print(Counter("konstantynopolitańczykowianeczka"))
+
+
+# In[15]:
+
+
+import calendar as cal
+cal.TextCalendar().prmonth(2019, 12)
+
+
+# In[17]:
+
+
+import math
+math.cos(math.pi)
+
+
+# Ważniejsze biblioteki:
+#  * `os`, `sys`: obsługa rzeczy dt. systemu i środowiska
+#  * `datetime`: wszystko co jest związane z czasem
+#  * `collections`: zawiera `Counter` i `defaultdict`
+#  * `typing`: poprawia anotacje typowania
 
 # In[ ]:
 
 
-print(is_greater_than_5(5))
-print(is_greater_than_5(-100))
-print(is_greater_than_5(500))
+
 
